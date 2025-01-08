@@ -27,7 +27,6 @@ o Utilize LINQ for data manipulation queries without writing explicit SQL.
 
 
 # Application de gestion de prêts de livres d’une bibliothèque
-## Application de gestion de prêts de livres d’une bibliothèque
 ## OBJECTIF: Créer une Application Web de Gestion de Prêts de Livres d’une bibliothèque.
 ## TECHNOLOGIES UTILISÉES: ASP.NET Core, Entity Framework Core, C#, Bootstrap, LINQ, BD SQL.
 ## DESCRIPTION DES TACHES :
