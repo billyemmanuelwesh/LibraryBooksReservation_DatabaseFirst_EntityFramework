@@ -1,0 +1,65 @@
+﻿@model GPLCC_2.Models.Pret
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Informations sur ce prêt</h1>
+
+<div class="item">
+    <div class="row">
+        <div class="col-lg-3 col-sm-4">
+            <div class="image">
+            <img src="~/imagesBib/livre2.jpg" alt="">
+            </div>
+        </div>
+   
+        <div class="right-content col-lg-9 col-sm-8" >
+            <hr />
+            <dl class="row">
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.DateDebut)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.DateDebut)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.DateFin)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.DateFin)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.NumLivreNavigation.Titre)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.NumLivreNavigation.Titre)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.NumLivreNavigation.Numero)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.NumLivreNavigation.Numero)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.NumMembreNavigation.Nom)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.NumMembreNavigation.Nom) 
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NumMembreNavigation.Prenom)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NumMembreNavigation.Prenom)
+                </dd>
+            </dl>
+        </div>
+        <hr />
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.Numero" class="btn btn-light">Modifier</a> |
+            <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+        </div>
+    </div>
+</div>
+

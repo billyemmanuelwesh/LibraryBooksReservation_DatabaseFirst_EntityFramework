@@ -1,0 +1,41 @@
+﻿@model GPLCC_2.Models.Retard
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Informations sur ce retard</h1>
+
+<div>
+    <h4>Retard</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumPretNavigation.NumMembreNavigation.Numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumPretNavigation.NumMembreNavigation.Numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumPretNavigation.NumMembreNavigation.Affiche)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumPretNavigation.NumMembreNavigation.Affiche)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumPretNavigation.NumLivreNavigation.Titre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumPretNavigation.NumLivreNavigation.Titre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NbJoursRetard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NbJoursRetard)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<GPLCC_2.Models.Retard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <h3>Liste des retards</h3>
+    </div>
+    <div class="col-sm-4">
+        <a class="livre"><img src="~/images/retard.png" class="i"></a>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumPretNavigation.NumMembreNavigation.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumPretNavigation.NumMembreNavigation.Affiche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumPretNavigation.NumLivreNavigation.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NbJoursRetard)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumPretNavigation.NumMembreNavigation.Numero) 
+            </td>
+             <td>
+                 @Html.DisplayFor(modelItem => item.NumPretNavigation.NumMembreNavigation.Affiche) 
+            </td>
+            <td>
+                 @Html.DisplayFor(modelItem => item.NumPretNavigation.NumLivreNavigation.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NbJoursRetard)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<GPLCC_2.Models.Livre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="row">
+    <div class="col-sm-8">
+         <h3>Liste des livres</h3>
+    </div>
+    <div class="col-sm-4">
+        <a asp-action="Create" class="livre btn btn-secondary"><img src="~/images/livre.png" class="i">Nouveau livre</a>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Auteur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categories)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Auteur)
+            </td>
+            <td>
+               @{
+                    // pour afficher : Enfant, Adulte, Jenesse à la place de 1, 2, 3 ect...
+                    String maCategorie = ViewBag.MesCategories[item.Categories];
+                }
+                    @Html.DisplayFor(modelItem => maCategorie)
+            </td>
+            <td>
+                <a asp-action="Edit" class="fa fa-pencil-alt" title="Modifier" asp-route-id="@item.Numero"></a> 
+                <a asp-action="Details" class="fa fa-th-list" title="Informations" asp-route-id="@item.Numero"></a> 
+                <a asp-action="Delete" class="fa fa-trash-alt" title="Supprimer" asp-route-id="@item.Numero"></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

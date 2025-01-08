@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GPLCC_2</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.css">
+    <link rel="stylesheet" href="~/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="~/css/owl.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/GPLCC_2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+            
+                <a  asp-area="" asp-controller="Membres" asp-action="Index"><img id="idlogo" style="width:70px" src="~/images/book.png"></a>
+               
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Membres" asp-action="Index">Membres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Livres" asp-action="Index">Livres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Prets" asp-action="Index">Prêts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Retards" asp-action="Index">Retards</a>
+                    </li>
+                </ul>
+
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="second-page-heading">
+    <div class="container">
+        <main role="main" class="pb-3">
+      
+            @RenderBody()
+        </main>
+    </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - GPLCC_2 - All Rights Reserved - Billy Emmanuel Wesh<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/isotope.min.js"></script>
+    <script src="~/js/owl-carousel.js"></script>
+    <script src="~/js/wow.js"></script>
+    <script src="~/js/tabs.js"></script>
+    <script src="~/js/popup.js"></script>
+    <script src="~/js/custom.js"></script>
+
+    <script>
+        function bannerSwitcher() {
+            next = $('.sec-1-input').filter(':checked').next('.sec-1-input');
+            if (next.length) next.prop('checked', true);
+            else $('.sec-1-input').first().prop('checked', true);
+        }
+
+        var bannerTimer = setInterval(bannerSwitcher, 5000);
+
+        $('nav .controls label').click(function () {
+            clearInterval(bannerTimer);
+            bannerTimer = setInterval(bannerSwitcher, 5000)
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

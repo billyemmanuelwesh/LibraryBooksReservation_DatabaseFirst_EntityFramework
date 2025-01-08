@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GPLCC_2.Models.Pret>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="row">
+    <div class="col-sm-8">
+        <h3>Liste des Emprunts</h3>
+    </div>
+    <div class="col-sm-4">
+        <a asp-action="Create" class="livre btn btn-secondary"><img src="~/images/pret.png" class="i">Nouveau prêt</a>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>   
+            <th>
+                @Html.DisplayNameFor(model => model.NumMembreNavigation.Affiche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumLivreNavigation.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumLivreNavigation.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateDebut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumMembreNavigation.Affiche)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumLivreNavigation.Titre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumLivreNavigation.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateDebut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateFin)
+            </td>
+            <td>
+                <a asp-action="Edit" class="fa fa-pencil-alt" title="Modifier" asp-route-id="@item.Numero"></a> 
+                <a asp-action="Details" class="fa fa-th-list" title="Informations" asp-route-id="@item.Numero"></a> 
+                <a asp-action="Delete" class="fa fa-trash-alt" title="Supprimer" asp-route-id="@item.Numero"></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

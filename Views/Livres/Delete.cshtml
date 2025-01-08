@@ -1,0 +1,44 @@
+﻿@model GPLCC_2.Models.Livre
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Supprimer</h1>
+<h4>Livre</h4>
+<hr />
+
+<h3>Êtes-vous sur de vouloir supprimer ce livre?</h3>
+<hr />
+<div>
+    
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Auteur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Auteur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class = "col-sm-10">
+
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+    </dl><br />
+    <h6 class="erreur"><strong>@TempData["Message"]</strong></h6>
+    <hr />
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Numero" />
+        <input type="submit" value="Supprimer" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+    </form>
+</div>

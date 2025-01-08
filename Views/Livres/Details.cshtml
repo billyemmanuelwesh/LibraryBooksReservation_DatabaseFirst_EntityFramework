@@ -1,0 +1,56 @@
+﻿@model GPLCC_2.Models.Livre
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Informations sur ce livre</h1>
+
+<div class="item">
+    <div class="row">
+        <div class="col-lg-3 col-sm-4">
+            <div class="image">
+            <img src="~/imagesBib/livre1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="right-content col-lg-9 col-sm-8">
+            <hr/>
+
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Titre)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Titre)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Auteur)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Auteur)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Categories)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Categories)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Numero)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Numero)
+                </dd>
+            </dl>
+            <hr />
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model?.Numero" class="btn btn-light">Modifier</a> |
+                <a asp-action="Index" class="btn btn-secondary">Retour à la liste</a>
+            </div>
+
+       
+        </div>
+    </div>
+</div>
+
