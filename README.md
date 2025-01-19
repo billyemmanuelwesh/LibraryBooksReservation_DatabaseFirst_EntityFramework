@@ -8,8 +8,6 @@ o Manage book loans to members.
 
 o Integrate database operations (Create, Read, Update, Delete) CRUD.
 
-o Complete the project without ORM or Entity Framework (using manual SQL).
-
 o Apply Bootstrap for responsive design and ergonomics.
 
 o Use a local database (LocalDB) to store/manage data on books and loans.
@@ -20,7 +18,7 @@ o Utilize LINQ for data manipulation queries without writing explicit SQL.
 
 ## SKILLS: 
 · Software Development · Entity Framework Core · ASP.NET MVC · Back-end Web Development 
-· SQL · Bootstrap · C# · ASP.NET Core · Databases · Without ORM · LINQ · Database First · Without Entity Framework
+· Bootstrap · C# · ASP.NET Core · Databases · LINQ · Database First 
 
 
 
@@ -28,15 +26,13 @@ o Utilize LINQ for data manipulation queries without writing explicit SQL.
 
 # Application de gestion de prêts de livres d’une bibliothèque
 ## OBJECTIF: Créer une Application Web de Gestion de Prêts de Livres d’une bibliothèque.
-## TECHNOLOGIES UTILISÉES: ASP.NET Core, Entity Framework Core, C#, Bootstrap, LINQ, BD SQL.
+## TECHNOLOGIES UTILISÉES: ASP.NET Core, Entity Framework Core, C#, Bootstrap, LINQ, Base de données
 ## DESCRIPTION DES TACHES :
 o Développer une application serveur web avec C#, ASP.NET Core 6, MVC.
 
 o Gérer les prêts de livres aux membres.
 
 o Intégrer des opérations de base de données (Créer, Lire, Mettre à jour, Supprimer) CRUD.
-
-o Faire le projet sans ORM OU Entity Framework (avec SQL manuel).
 
 o Appliquer Bootstrap pour le design responsif et l’ergonomie.
 
@@ -48,5 +44,5 @@ o Exploiter LINQ pour les requêtes de manipulation de données, sans écrire de
 
 ## Compétences :
 · Développement de logiciels · Entity Framework Core · ASP.NET MVC · Développement web back-end 
-· SQL · Bootstrap · C# · ASP.NET Core · Bases de données · Sans ORM · LINQ · Database first · sans Entity Framework
+· Bootstrap · C# · ASP.NET Core · Bases de données · LINQ · Database first 
 
